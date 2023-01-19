@@ -4,8 +4,25 @@
     box-sizing: border-box;
 }
 
+.contenedor {
+    display: grid;
+    grid-gap: 0.6em;
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        'header     header      header'
+        'article    article     sidebar'
+        'article    article     sidebar'
+        'article    article     sidebar'
+        'footer     footer      footer';
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/*HEADER START*/
 .header {
     background-color: lightgray;
+    grid-area: header;
     background-image: url(images/header.jpg);
     background-size: 112em;
     background-position: center;
@@ -62,4 +79,100 @@
     font-family: 'Times New Roman', sans-serif;
     font-size: 2em;
     height: 4em;
+}
+
+/*HEADER END*/
+
+/*MAIN START*/
+.article {
+    background-color: lightgray;
+    grid-area: article;
+    padding: 0.5em;
+    display: grid;
+    grid-gap: 0.8em;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+}
+
+#section1 , #section2, #section3, #section4 {
+    background-color: rgb(240, 239, 238);
+    padding: 0.5em;
+    margin: 0.4em;
+}
+
+#section1 {grid-area: 1/1;}
+
+#section3 {grid-area: 2/1;}
+
+#section2 {grid-area: 1/2;}
+
+#section4 {grid-area: 2/2;}
+
+#fecha1, #fecha2, #fecha3, #fecha4 {
+    color: yellow;
+    background-size: 100%;
+    background-position: center;
+    height:12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+#fecha1 {background-image: url(images/sakura.jpg);}
+
+#fecha2 {background-image: url(images/comida.jpg);}
+
+#fecha3 {background-image: url(images/fuji.jpg);}
+
+#fecha4 {background-image: url(images/noche.jpg);}
+
+.titulos {
+    background-color: rgb(250, 143, 143);
+    color: white;
+    padding-top: 0.5em;
+    margin-top: 0.2em;
+}
+
+.info {
+    color: rgb(109, 109, 109);
+    column-count: 2;
+    margin: 1em;
+}
+
+.leer{
+    color:gray;
+    font-size: 0.8em;
+    margin: 1em; 
+}
+
+#texto2 {
+    grid-area: 3/span 3;
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+/*MAIN END*/
+
+.sidebar {
+    background-color: lightgray;
+    grid-area: sidebar;
+    text-align: center;
+}
+
+#titulo3 {
+    margin: 2em;
+    font-size: 0.9em;
+}
+
+#texto3 {
+    font-size: 0.8em;
+    margin: 0.8em;
+}
+
+.footer {
+    background-color: rgb(253, 238, 240);
+    color: gray;
+    font-size: 0.8em;
+    grid-area: footer;
+    text-align: center;
+    padding:0.7em;
 }
