@@ -190,3 +190,25 @@
     text-align: center;
     padding:0.7em;
 }
+
+/*MEDIA QUERY*/
+/*tablet*/
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: 
+        'header     header      header'
+        'article    article     article'
+        'article    article     article'
+        'sidebar    sidebar     sidebar'
+        'footer     footer      footer';
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 576px) {
+    .article {display:block;}
+    #texto1 {
+        font-size: 1.5em;
+        height: 5.4em;
+    }
+}
