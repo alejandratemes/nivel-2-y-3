@@ -38,6 +38,13 @@
     grid-area: 1/1;
     display: flex;
     justify-self: center;
+    animation-name: logo;
+    animation-duration: 2s;
+}
+
+@keyframes logo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .barra {
@@ -79,6 +86,13 @@
     font-family: 'Times New Roman', sans-serif;
     font-size: 2em;
     height: 4em;
+    animation-name: titulo;
+    animation-duration: 2s;
+}
+
+@keyframes titulo {
+    0% {opacity: 0;}
+    100% {opacity: 0.5;}
 }
 
 /*HEADER END*/
